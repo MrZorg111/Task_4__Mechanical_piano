@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <cstdlib>
 
 /*
@@ -24,20 +25,47 @@ enum note
 {
     DO = 1,
     RE = 2,
-    MI = 4,
-    FA = 8,
-    SOL = 16,
-    LA = 32,
-    SI = 64
+    MI = 3,
+    FA = 4,
+    SOL = 5,
+    LA = 6,
+    SI = 7
 };
 
 int main() {
-    char* notes[12];
+    int melody[12];
     std::cout << "Enter the note code from 1 to 7: \n";
     for( int i = 0; i < 12; i++) {
-        std::cin >> notes[i];
+        std::cin >> melody[i];
     }
 
+    for(int l = 0; l < 12; l++) {
+        if (melody[l] == DO) {
+            std::cout << "DO";
+        }
+        if (melody[l] == RE) {
+            std::cout << "RE";
+        }
+        if (melody[l]== MI) {
+            std::cout << "MI";
+        }
+        if (melody[l] == FA) {
+            std::cout << "FA";
+        }
+        if (melody[l] == SOL) {
+            std::cout << "SOL";
+        }
+        if (melody[l] == LA) {
+            std::cout << "LA";
+        }
+        if (melody[l] == SI) {
+            std::cout << "SI";
+        }
+        if (l == 2 || 5 || 8 ) {
+            std::cout << " ";
+        }
 
+
+        }
     return 0;
 }
